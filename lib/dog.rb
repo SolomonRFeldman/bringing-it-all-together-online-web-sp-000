@@ -33,6 +33,9 @@ class Dog
     dog.save
   end
   
+  def self.new_from_db(row)
+    
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE dogs (
