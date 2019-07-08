@@ -20,7 +20,10 @@ class Dog
   end
   
   def self.find_or_create_by(id)
-    if self.find_by_id(id)
+    if dog = self.find_by_id(id)
+      dog
+    else
+      
       
   
   def self.create(name:, breed:)
