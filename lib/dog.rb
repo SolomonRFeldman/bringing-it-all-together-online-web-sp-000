@@ -21,7 +21,7 @@ class Dog
   
   def self.find_or_create_by(id)
     if dog = self.find_by_id(id)
-      dog
+      
     else
       
       
