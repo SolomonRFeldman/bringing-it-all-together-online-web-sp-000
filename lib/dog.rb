@@ -19,6 +19,10 @@ class Dog
     Dog.new(id: dog_data[0], name: dog_data[1], breed: dog_data[2])
   end
   
+  def self.find_or_create_by(id)
+    if self.find_by_id(id)
+      
+  
   def self.create(name:, breed:)
     dog = Dog.new(name: name, breed: breed)
     dog.save
