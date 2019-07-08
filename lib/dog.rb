@@ -14,6 +14,11 @@ class Dog
     self
   end
   
+  def update
+    sql = "UPDATE dogs (name, breed) VALUES (?, ?) WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
+  end
+  
   def self.find_by_id(id)
     dog_data = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?", id).first
     Dog.new_from_db(dog_data)
